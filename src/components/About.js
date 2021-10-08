@@ -27,10 +27,10 @@ export default function About(props) {
 
   return (
     <div className="container" style={{color: props.mode==='light'?'black':'white'}} >
-        <h1 className="my-4">About  <img src="src\components\hi.gif"/></h1>
-      <div className="accordion my-5" id="accordionExample" style={myStyle}>
+        <h1 className="my-4">About  </h1>
+      <div className="accordion my-5" id="accordionExample" style={{border: "solid 3px #DF7D7D", borderRadius: "6px"}}>
         <div className="accordion-item">
-        <div className="accordion-item">
+        
           <h2 className="accordion-header" id="headingTwo">
             <button
               className="accordion-button collapsed"
@@ -39,7 +39,7 @@ export default function About(props) {
               data-bs-target="#collapseTwo"
               aria-expanded="false"
               aria-controls="collapseTwo"
-              style={{backgroundColor: props.mode==='light'?'white':'#061124', color: props.mode==='light'?'#061124':'white'}}
+              style={{backgroundColor: props.mode==='light'?'#d3e0e9':'#061124', color: props.mode==='light'?'#061124':'white'}}
             >
               <strong>About TextUtils</strong>
               
@@ -51,12 +51,12 @@ export default function About(props) {
             aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body" style={{backgroundColor: props.mode==='light'?'white':'#061124', color: props.mode==='light'?'#061124':'white'}}>
+            <div className="accordion-body" style={{backgroundColor: props.mode==='light'?'#d3e0e9':'#061124', color: props.mode==='light'?'#061124':'white'}}>
             TextUtils is a utility which can make your day to day life by manipulating your text in the way you want.
             </div>
           </div>
         </div>
-        
+        <div className="accordion-item">
           <h2 className="accordion-header" id="headingOne">
             <button
               className="accordion-button"
@@ -65,7 +65,7 @@ export default function About(props) {
               data-bs-target="#collapseOne"
               aria-expanded="true"
               aria-controls="collapseOne"
-              style={{backgroundColor: props.mode==='light'?'white':'#061124', color: props.mode==='light'?'#061124':'white'}}
+              style={{backgroundColor: props.mode==='light'?'#d3e0e9':'#061124', color: props.mode==='light'?'#061124':'white'}}
             >
               <strong>Features</strong>
             </button>
@@ -76,7 +76,7 @@ export default function About(props) {
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body" style={{backgroundColor: props.mode==='light'?'white':'#061124', color: props.mode==='light'?'#061124':'white'}}>
+            <div className="accordion-body" style={{backgroundColor: props.mode==='light'?'#d3e0e9':'#061124', color: props.mode==='light'?'#061124':'white'}}>
               <ul>
                 <li className="my-2">
                   Change lowercase text to uppercase.
@@ -112,9 +112,9 @@ export default function About(props) {
               data-bs-target="#collapseThree"
               aria-expanded="false"
               aria-controls="collapseThree"
-              style={{backgroundColor: props.mode==='light'?'white':'#061124', color: props.mode==='light'?'#061124':'white'}}
+              style={{backgroundColor: props.mode==='light'?'#d3e0e9':'#061124', color: props.mode==='light'?'#061124':'white'}}
             >
-              Accordion Item #3
+              <strong>Browser Compatibility</strong>
             </button>
           </h2>
           <div
@@ -123,15 +123,8 @@ export default function About(props) {
             aria-labelledby="headingThree"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body" style={{backgroundColor: props.mode==='light'?'white':'#061124', color: props.mode==='light'?'#061124':'white'}}>
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+            <div className="accordion-body" style={{backgroundColor: props.mode==='light'?'#d3e0e9':'#061124', color: props.mode==='light'?'#061124':'white'}}>
+              This <strong>Text Utility</strong> software works in any web browsers such as Chrome, Firefox, Internet Explorer, Safari, Opera. It suits to count characters in facebook, blog, books, excel document, pdf document, essays, etc.
             </div>
           </div>
         </div>

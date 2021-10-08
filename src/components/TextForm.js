@@ -118,7 +118,7 @@ export default function TextForm(props) {
           <textarea
             className="form-control my-3"
             id="myBox"
-            rows="13"
+            rows="10"
             value={text}
             onChange={handleOnChange}
             style={{backgroundColor: props.mode==='light'?'#D3E0E9':'#061124', color: props.mode==='light'?'#061124':'white', border: props.mode==='light'?'solid 2px #e71414':'solid 2px #e55d66'}}
@@ -160,6 +160,7 @@ export default function TextForm(props) {
         <h2>Preview</h2>
         <p className="my-4">{text.length>0?text:"Enter something in the textbox above to preview it here!"}</p>
       </div>
+      
       {/* <div className="container my-3">
         <button type="button" class="btn btn-primary">
           Enable Dark Mode
