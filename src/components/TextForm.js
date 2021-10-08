@@ -32,6 +32,11 @@ export default function TextForm(props) {
 
   }
 
+  const handleListen = ()=>{
+    var msg = new SpeechSynthesisUtterance(text);
+    window.speechSynthesis.speak(msg);
+  }
+
 
 //   let myStyle = {
 //     color: 'white',
@@ -43,8 +48,8 @@ export default function TextForm(props) {
   return (
     
     <>
-      <div className="container" >
-        <h1>{props.heading}</h1>
+      <div className="container" style={{color: props.mode==='light'?'black':'white'}}>
+        <h1 >{props.heading}</h1>
         <div className="mb-3">
           <textarea
             className="form-control"
@@ -52,33 +57,37 @@ export default function TextForm(props) {
             rows="13"
             value={text}
             onChange={handleOnChange}
+            style={{backgroundColor: props.mode==='light'?'white':'#061124', color: props.mode==='light'?'#061124':'white'}}
             
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-2" onClick={handleUpClick}>
+        <button className="btn btn-primary" onClick={handleUpClick}>
           Convert to Uppercase
         </button>
-        <button className="btn btn-primary" onClick={handleLoClick}>
+        <button className="btn btn-primary mx-2" onClick={handleLoClick}>
           Convert to Lowercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleExtraSpace}>
+        <button className="btn btn-primary " onClick={handleExtraSpace}>
           Remove Extra Spaces
         </button>
-        <button className="btn btn-primary" onClick={handleClear}>
+        <button className="btn btn-primary mx-2" onClick={handleClear}>
           Clear Text
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleCopy}>
+        <button className="btn btn-primary" onClick={handleCopy}>
           Copy Text
         </button>
+        <button className="btn btn-primary mx-2" onClick={handleListen}>
+          Listen
+        </button>
       </div>
-      <div className="container my-3" >
+      <div className="container my-3" style={{color: props.mode==='light'?'black':'white'}}>
         <h2>Your text summary</h2>
         <p>
           {text.split(" ").length} words and {text.length} characters
         </p>
         <p>{0.008 * text.split(" ").length} Minutes read</p>
         <h2>Preview</h2>
-        <p>{text}</p>
+        <p className="my-4">{text.length>0?text:"Enter something in the textbox above to preview it here!"}</p>
       </div>
       {/* <div className="container my-3">
         <button type="button" class="btn btn-primary">
