@@ -39,7 +39,7 @@ function App() {
     else
     {
       setMode('light');
-      document.body.style.backgroundColor = 'white';
+      document.body.style.backgroundColor = '#d3e0e9';
       showAlert("Light mode has been enabled", "success");
     }
   }
