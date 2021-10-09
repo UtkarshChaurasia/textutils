@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 export default function TextForm(props) {
   const handleUpClick = () => {
-    //console.log("Uppercase was clicked");
     
     
     if(text.length===0) props.showAlert("Enter something!","warning");
@@ -15,7 +14,6 @@ export default function TextForm(props) {
     }
   };
   const handleLoClick = () => {
-    //console.log("Uppercase was clicked");
     if(text.length===0) props.showAlert("Enter something!","warning");
     else{
     let newText = text.toLowerCase();
@@ -24,7 +22,6 @@ export default function TextForm(props) {
     }
   };
   const handleOnChange = (event) => {
-    //console.log("Uppercase was clicked");
     setText(event.target.value);
   };
 
@@ -41,9 +38,7 @@ export default function TextForm(props) {
     var text = document.getElementById("myBox");
     if(text.length===0) props.showAlert("Enter something!","warning");
     else{
-    text.select();
     navigator.clipboard.writeText(text.value);
-    document.getSelection().removeAllRanges();
     props.showAlert("Copied to Clipboard!","success");
     }
   }
@@ -85,30 +80,12 @@ export default function TextForm(props) {
   }
 
   const handleListen = ()=>{
-    // if(text.length===0)
-    // {
-    //   showAlert()
-    // }
     if(text.length===0) props.showAlert("Enter something!","warning");
     else{
     var msg = new SpeechSynthesisUtterance(text);
     window.speechSynthesis.speak(msg);
     }
   }
-
-  // const wordLen = (text)=>{
-  //   if(text.endsWith('')){
-  //     return (text.split('').length)-1;
-  //   }
-  //   else return text.split('').length;
-  // }
-
-
-//   let myStyle = {
-//     color: 'white',
-//     backgroundColor: '#1f2e2e'
-// }
-
 
   const [text, setText] = useState("");
   return (
@@ -156,18 +133,12 @@ export default function TextForm(props) {
       <div className="container my-3" style={{color: props.mode==='light'?'black':'white'}}>
         <h2>Your text summary</h2>
         <p>
-          {text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters
+          {text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters
         </p>
-        <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes read</p>
+        <p>{0.008 * text.split(/\s+/).filter((element)=>{return element.length!==0}).length} Minutes read</p>
         <h2>Preview</h2>
         <p className="my-4">{text.length>0?text:"Enter something in the textbox above to preview it here!"}</p>
       </div>
-      
-      {/* <div className="container my-3">
-        <button type="button" class="btn btn-primary">
-          Enable Dark Mode
-        </button>
-      </div> */}
     </>
   );
 }
