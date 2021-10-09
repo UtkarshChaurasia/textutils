@@ -129,19 +129,19 @@ export default function TextForm(props) {
         <button className="btn btn-primary" onClick={handleUpClick}>
           Convert to Uppercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleLoClick}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleLoClick}>
           Convert to Lowercase
         </button>
         <button className="btn btn-primary " onClick={handleExtraSpace}>
           Remove Extra Spaces
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleClear}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleClear}>
           Clear Text
         </button>
         <button className="btn btn-primary" onClick={handleCopy}>
           Copy Text
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleEncode64}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleEncode64}>
           Encode to Base64
         </button>
         <button className="btn btn-primary" onClick={handleDecode64}>
