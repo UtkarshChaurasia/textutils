@@ -5,6 +5,7 @@ export default function TextForm(props) {
   const handleUpClick = () => {
     //console.log("Uppercase was clicked");
     
+    
     if(text.length===0) props.showAlert("Enter something!","warning");
     else
     { 

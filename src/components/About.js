@@ -4,7 +4,7 @@ export default function About(props) {
     
 
     //const [btnText, setBtnText] = useState("Enable Dark Mode")
-    document.title = "TextUtils - About"
+    
    
    
 
