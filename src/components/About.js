@@ -35,7 +35,7 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={{backgroundColor: props.mode==='light'?'#d3e0e9':'#061124', color: props.mode==='light'?'#061124':'white'}}>
-            TextUtils is a utility which can make your day to day life by manipulating your text in the way you want.
+            TextUtils is a utility which can make your day to day life easy, by manipulating your text in the way you want.
             </div>
           </div>
         </div>
