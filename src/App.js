@@ -32,13 +32,13 @@ function App() {
     if(Mode === 'light')
     {
       setMode('dark');
-      document.body.style.backgroundColor = '/061124';
+      document.body.style.backgroundColor = '#061124';
       showAlert("Dark mode has been enabled", "success");
     }
     else
     {
       setMode('light');
-      document.body.style.backgroundColor = '/d3e0e9';
+      document.body.style.backgroundColor = '#d3e0e9';
       showAlert("Light mode has been enabled", "success");
     }
   }
