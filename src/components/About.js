@@ -65,7 +65,7 @@ export default function About(props) {
                   Change lowercase text to uppercase.
                 </li >
                 <li>
-                  Change lowercase text to uppercase.
+                  Change uppercase text to lowercase.
                 </li>
                 <li className="my-2">
                   Remove Extra Space.
