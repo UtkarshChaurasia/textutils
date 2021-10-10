@@ -20,9 +20,9 @@ TextUtils is a text to audio converter and a text utility which can be used to m
 
 ## :bulb: Built Using
 
-⚛️ [**REACTJS**](https://reactjs.org/)
-![xyz](/public/bootstrap.jpg)&nbsp;[**BOOTSTRAP**](https://getbootstrap.com/)
-![xyz](/public/netlify.jpg)&ensp;[**NETLIFY**](https://www.netlify.com/)
+⚛️ [**REACTJS**](https://reactjs.org/)<br>
+![xyz](/public/bootstrap.jpg)&nbsp;[**BOOTSTRAP**](https://getbootstrap.com/)<br>
+![xyz](/public/netlify.jpg)&ensp;[**NETLIFY**](https://www.netlify.com/)<br>
 
 ---
 
